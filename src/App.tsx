@@ -59,6 +59,7 @@ const Wrapper = styled.div`
   height: 100vh;
   justify-content: center;
 `;
+
 function App() {
   const [isLoading, setLoading] = useState(true);
   const init = async () => {

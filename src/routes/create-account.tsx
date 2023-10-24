@@ -5,6 +5,8 @@ import { auth } from "../firebase";
 import { FirebaseError } from "firebase/app";
 import { Error, Form, Input, Switcher, Title, Wrapper } from "../components/auth-components";
 
+import GithubButton from "../components/github-btn";
+
 export default function CreateAccount() {
   const navigate = useNavigate();
   const [isLoading, setLoading] = useState(false);
@@ -47,6 +49,7 @@ export default function CreateAccount() {
       setLoading(false);
     }
   };
+
   return (
     <Wrapper>
       <Title>Join X</Title>
@@ -61,6 +64,7 @@ export default function CreateAccount() {
         Already have an account? {""}
         <Link to="/login">Log In &rarr;</Link>
       </Switcher>
+      <GithubButton />
     </Wrapper>
   );
 }
