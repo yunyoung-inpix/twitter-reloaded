@@ -50,6 +50,7 @@ export default function Profile() {
   const [tweets, setTweets] = useState<ITweet[]>([]);
   const onAvatarChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const { files } = e.target;
+    if (!user) return;
     if (files && files.length === 1) {
       const file = files[0];
       const locationRef = ref(storage, `avatars/${user?.uid}`);
